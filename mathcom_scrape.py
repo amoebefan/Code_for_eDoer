@@ -23,5 +23,3 @@ for subject in subjects:
         text = topic.get_text()
         if href.startswith('/school/subject'):
             topics[text] = href
-
-print(topics)

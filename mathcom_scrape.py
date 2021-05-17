@@ -22,4 +22,7 @@ for subject in subjects:
         href = topic.get('href')
         text = topic.get_text()
         if href.startswith('/school/subject'):
-            topics[text] = href
+            if href.endswith('Quiz.html'):
+                None
+            else:
+                topics[text] = href

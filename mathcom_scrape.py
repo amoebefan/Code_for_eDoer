@@ -33,4 +33,8 @@ for subject in subjects:
                 topic_data['url'] = 'http://www.math.com' + subjects[subject] + href
                 data.append(topic_data)
 
-print(data)
+filename = 'mathcom_scrape.csv'
+with open(filename, 'w') as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames=data[0].keys())
+    writer.writeheader()
+    writer.writerows(data)

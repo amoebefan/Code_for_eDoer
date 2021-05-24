@@ -29,7 +29,7 @@ for subject in subjects:
             else:
                 subsubject = mathcom_subject.find(string=text).find_parent('tbody').b.get_text()
                 topic_data['subject'] = subject
-                topic_data['subsubject'] = subsubject
+                topic_data['subsubject'] = " ".join(subsubject.split())
                 topic_data['topic'] = text
                 topic_data['url'] = 'http://www.math.com' + subjects[subject] + href
                 data.append(topic_data)

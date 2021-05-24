@@ -35,7 +35,7 @@ for subject in subjects:
                 data.append(topic_data)
 
 filename = 'mathcom_scrape.csv'
-with open(filename, 'w') as csvfile:
+with open(filename, 'w', newline='') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=data[0].keys())
     writer.writeheader()
     writer.writerows(data)
